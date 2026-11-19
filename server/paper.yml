@@ -1,0 +1,123 @@
+# This is the main configuration file for Paper.
+# As you can see, there's tons to configure. Some options may impact gameplay, so use
+# with caution, and make sure you know what each option does before configuring.
+#
+# If you need help with the configuration or have any questions related to Paper,
+# join us in our Discord or IRC channel.
+#
+# Discord: https://discord.gg/papermc
+# IRC: #paper @ irc.esper.net ( https://webchat.esper.net/?channels=paper ) 
+# Website: https://papermc.io/ 
+# Docs: https://docs.papermc.io/ 
+
+verbose: false
+messages:
+  no-permission: '&cI''m sorry, but you do not have permission to perform this command.
+    Please contact the server administrators if you believe that this is in error.'
+  kick:
+    flying-player: Flying is not enabled on this server
+    flying-vehicle: Flying is not enabled on this server
+    connection-throttle: Connection throttled! Please wait before reconnecting.
+    authentication-servers-down: ''
+timings:
+  enabled: true
+  verbose: true
+  url: https://timings.aikar.co/
+  server-name-privacy: false
+  hidden-config-entries:
+  - database
+  - settings.bungeecord-addresses
+  - settings.velocity-support.secret
+  history-interval: 300
+  history-length: 3600
+  server-name: Unknown Server
+config-version: 27
+settings:
+  fix-entity-position-desync: true
+  load-permissions-yml-before-plugins: true
+  enable-player-collisions: true
+  incoming-packet-spam-threshold: 300
+  region-file-cache-size: 256
+  track-plugin-scoreboards: false
+  velocity-support:
+    enabled: false
+    online-mode: false
+    secret: 'pVFyWR70zMBy'
+  use-display-name-in-quit-message: false
+  save-empty-scoreboard-teams: false
+  bungee-online-mode: true
+  max-joins-per-tick: 3
+  use-alternative-luck-formula: false
+  log-player-ip-addresses: true
+  console:
+    enable-brigadier-highlighting: true
+    enable-brigadier-completions: true
+  console-has-all-permissions: false
+  suggest-player-names-when-null-tab-completions: true
+  player-auto-save-rate: -1
+  max-player-auto-save-per-tick: -1
+  resolve-selectors-in-books: false
+  proxy-protocol: false
+  lag-compensate-block-breaking: true
+  item-validation:
+    display-name: 8192
+    loc-name: 8192
+    lore-line: 8192
+    book:
+      title: 8192
+      author: 8192
+      page: 16384
+  watchdog:
+    early-warning-every: 5000
+    early-warning-delay: 10000
+  spam-limiter:
+    recipe-spam-increment: 1
+    recipe-spam-limit: 20
+    tab-spam-increment: 1
+    tab-spam-limit: 500
+  chunk-loading:
+    min-load-radius: 2
+    max-concurrent-sends: 2
+    autoconfig-send-distance: true
+    target-player-chunk-send-rate: 100.0
+    global-max-chunk-send-rate: -1.0
+    enable-frustum-priority: false
+    global-max-chunk-load-rate: -1.0
+    player-max-concurrent-loads: 20.0
+    global-max-concurrent-loads: 500.0
+    player-max-chunk-load-rate: -1.0
+  book-size:
+    page-max: 2560
+    total-multiplier: 0.98
+  loggers:
+    deobfuscate-stacktraces: true
+    use-rgb-for-named-text-colors: true
+  fix-target-selector-tag-completion: true
+  use-dimension-type-for-custom-spawners: false
+  send-full-pos-for-hard-colliding-entities: true
+  time-command-affects-all-worlds: false
+  async-chunks:
+    threads: -1
+  unsupported-settings:
+    allow-piston-duplication: false
+    allow-headless-pistons: false
+    perform-username-validation: true
+    allow-permanent-block-break-exploits: false
+    allow-piston-duplication-readme: This setting controls if player should be able
+      to use TNT duplication, but this also allows duplicating carpet, rails and potentially
+      other items
+    allow-headless-pistons-readme: This setting controls if players should be able
+      to create headless pistons.
+    allow-permanent-block-break-exploits-readme: This setting controls if players
+      should be able to break bedrock, end portals and other intended to be permanent
+      blocks.
+  packet-limiter:
+    kick-message: '&cSent too many packets'
+    limits:
+      all:
+        interval: 7.0
+        max-packet-rate: 500.0
+      PacketPlayInAutoRecipe:
+        interval: 4.0
+        max-packet-rate: 5.0
+        action: DROP
